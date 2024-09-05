@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package com.demo.app;
+
+service CounterService {
+  rpc IncrementCounter(Empty) returns (CounterResponse);
+  rpc GetCounter(Empty) returns (CounterResponse);
+}
+
+message Empty {
+}
+
+message CounterResponse {
+  int32 counter = 1;
+}
